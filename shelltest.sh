@@ -1,0 +1,5 @@
+#!/usr/bin/zsh
+echo Hey Aditya!
+FIRST_NAME=SATORU
+LAST_NAME=GOJO
+echo I AM $FIRST_NAME $LAST_NAME. NICE TO MEET YOU!
