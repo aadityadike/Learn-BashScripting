@@ -1,62 +1,30 @@
 # Bash Scripting
 
-## Vim
+## Basic of Vim
 
-To write some thing in vim you have to first press i button to get into insert mode it will allow to insert some text in your file.
-Press esc button to get out of insert mode.
-you can also press a for append.
-The append command will put the cursor after the current position, while the insert command will put the cursor before it.
-Using the append command is like moving the cursor one character to the right, and using the insert command.
-Using the insert command is like moving the cursor one character to the left, and using the append command.
-You choose which depending on where you want to start typing.
-Now you are in command mode you can simply type :wq means w for write the file and q for quit. But if you don't want to ignore the changes you can simply type :q!, it will ignore all the changes that you have made in current file.
+To write something in Vim, you first have to press the `i` button to enter insert mode. This mode allows you to insert text into your file. Press the `Esc` button to exit insert mode. Additionally, you can use `a` to append text.
 
-To view file from command line you can simply use cat command followed by file name.
+Now that you are in command mode, you can save and exit the file by typing:`wq` (w for write and q for quit). If you want to discard the changes, you can use:`q!` to ignore all the modifications made to the current file.
 
-```bash
-cat textfile.txt
-```
+To view a file from the command line, you can use the `cat` command followed by the file name. `cat textfile.txt`
 
-Let's write some scripts, now that you know how to write file in vim let's write a mini script, head over to terminal and type touch shelltest.sh it will create a new file in your current directory (enter pwd command to know in which directory you in) open shelltest.sh with vim:
-type echo Hello world!
-now get out vi by simply pressing esc and :wq
-now to execute that file simply type shell your are using followed by file name. now you will see hello world gets printed.
+Let's write some scripts now that you know how to write files in Vim. To begin, head over to the terminal and type `touch shelltest.sh`. This will create a new file in your current directory (use the `pwd` command to know which directory you are in). Open `shelltest.sh` with Vim:
 
-if don't want to specify shell everytime you can simply add your shell path on top of the file.
-let's first get path of your shell type command echo $SHELL. your will get path for your shell in my case i am using zsh so i get path
+1. Type: `echo Hello world!`
+    
+2. Press: `Esc`
+    
+3. Type: `wq`
+    
 
-```bash
-/usr/bin/zsh
-```
+To execute the file, simply type the shell you are using followed by the file name. For instance, if you're using Bash, type: `bash shelltest.sh`
 
-copy the path by ctrl + shift + c.
-open shelltest.sh and hit i to get inside insert mod now just type #! and past the path by ctrl + shift + v now
-your bash file may look like this:
+If you don't want to specify the shell every time, you can simply add your shell's path at the top of the file. To get the path of your shell, type the command `echo $SHELL`. In my case, I am using Zsh, and the path is `/usr/bin/zsh`. Copy the path using `Ctrl + Shift + C`.
 
-```bash
- #!/usr/bin/zsh
-echo Hello world!
-```
+Open `shelltest.sh` again, press `i` to enter insert mode, and type `#!` followed by pasting the path using `Ctrl + Shift + V`. Now your bash file may look like this:
 
-Let's try to execute the file type ./shelltest.sh
+Let's try to execute the file by typing `./shelltest.sh`. If you encounter the following `error:zsh: permission denied: ./shelltest.sh`
 
-```bash
-    zsh: permission denied: ./shelltest.sh
-```
+It means you don't have permission to execute the file. You can resolve this by giving execute permission to the file using the following command: `chmod u+x shelltest.sh`
 
-Ohh, we have an error ok, the error say that we don't have permission to execute the file. we can resolve that by simply giving permissions to file
-type the following command
-
-```bash
-    chmod u+x shelltest.sh
-```
-
-this command will give permission to user to execute the file.
-
-now , let's execute one more time ./shelltest.sh tada! we have our results!
-Hello World !
-
-ok now that you have know the basis we can dive deeper, let's look at how to define variables.
-type variable name it can be anything, let's take NAME= Gojo hit enter now enter echo command followed by hello $NAME and you will see hello Gojo in you terminal.
-ok until now we were using variable in our terminal but now we will use variable in our script and also we are going to take user input don't worry it's going to be very easy,
-lets make a new file called interactiveShell.sh and head inside that using vim,
+This command grants the user permission to execute the file. Now, try executing `./shelltest.sh` again. Voilà! You should see the output: **Hello World!**
