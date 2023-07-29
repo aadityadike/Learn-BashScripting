@@ -1,9 +1,8 @@
 #!/usr/bin/zsh
-
-echo "Hey there, what's your good name?"
+echo "Hey there, what's your First name?"
 read FIRST_NAME
 
-echo "Do you have any nickname? If yes, then tell me, and I will call you by that."
-read NICKNAME
+echo "what's your Last name?"
+read LAST_NAME
 
-echo "Hey $FIRST_NAME, we will now call you $NICKNAME."
+echo "Hey $FIRST_NAME $LAST_NAME."
