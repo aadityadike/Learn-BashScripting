@@ -1,0 +1,7 @@
+Dhoni is Great WicketKeeper.
+Virat is Goat.
+Rohit scored more double centuries.
+Jadeja is greatest all rounder.
+
+# awk '{length()}' file.sh
+# awk options 'selection _criteria {action }' input-file > output-file

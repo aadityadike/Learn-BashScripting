@@ -196,3 +196,16 @@ Next, we encounter the `else` statement, which is usually the last statement whe
 Finally, `fi` specifies the end of the `if-else` statements.
 
 `${1,}` converts the first argument to lowercase, and `${1,,}` converts it to all lowercase.
+
+## Case Statement
+
+    Here we are using the case command to define its cases. We then pass arguments to be tested against those cases.The USER variable holds the value of our username. If the arguments match the username, we will execute the corresponding code block, in this case, echoing the username. If the arguments don't match, we will move on to the next case, and so on. If none of the cases match, we will use an asterisk (\*) to define a default case where we will echo a specific string. Finally, by specifying 'esac,' we indicate that the case should stop checking further.Although the syntax may appear complex, the underlying logic is similar to using if-else statements.
+
+## Arrays
+
+In Bash, an array is a versatile variable that allows you to store multiple values under a single name. These arrays are zero-indexed, meaning that the first element is accessed using index 0, the second with index 1, and so on. Let's explore some code examples to grasp this concept better.
+
+In the example script below, we have a variable named HOBBIES that holds multiple values. This is where the array comes into play. To access the values within the array, simply wrap the variable name (HOBBIES) with curly braces. Additionally, if you want to retrieve a specific element, you can do so by passing the index number.
+echo -n for not to take new lines.
+
+## Functions
