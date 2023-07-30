@@ -182,3 +182,17 @@ You can use the exit status codes to check the success or failure of commands in
 | 128+n            | Fatal error signal "n"         |
 | 130              | Script terminated by Control-C |
 | 255              | Exit status out of range       |
+
+cheatSheet for test [Operator](https://kapeli.com/cheat_sheets/Bash_Test_Operators.docset/Contents/Resources/Documents/index)
+
+# If-else Statements
+
+If you have done programming before, 'if' and 'else' statements should be very familiar to you. The idea is the same in bash, but if you haven't encountered them before, don't worry; they're easy to understand. I'll explain each and every word, so let's dive into it. Look at the following code and type it in your file.
+Let's improve the grammar and readability of the explanation:
+
+Let's look at the above code line by line. First, we have the shebang, which we've already covered. Moving to the next line, we encounter the `if [ "${1,,}" = $USER" ]; then` statement. This line begins an `if` statement, which checks if the first argument (the provided username), converted to lowercase, matches the value of the `$USER` environment variable.If the condition is true, it echoes the provided username. If the condition is not true, it proceeds to the next line and checks for the next similar condition: `[ "${1,,}" = "help" ]; then`. This condition also checks if the provided username, when converted to lowercase, matches the string "help". If this condition is true, it echoes the specified string; otherwise, it moves forward.
+Next, we encounter the `else` statement, which is usually the last statement when neither of the previous conditions is true. In this case, it echoes a different string.
+
+Finally, `fi` specifies the end of the `if-else` statements.
+
+`${1,}` converts the first argument to lowercase, and `${1,,}` converts it to all lowercase.
